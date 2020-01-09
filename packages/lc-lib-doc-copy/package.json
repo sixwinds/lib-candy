@@ -1,0 +1,22 @@
+{
+  "name": "lc-lib-doc-copy",
+  "version": "0.1.0",
+  "description": "doc copy",
+  "main": "index.js",
+  "scripts": {
+    "test": "lc-jest-test"
+  },
+  "keywords": [
+    "doc",
+    "copy"
+  ],
+  "author": "Bernie Wang",
+  "license": "MIT",
+  "dependencies": {
+    "lc-util": "^0.1.0"
+  },
+  "devDependencies": {
+    "fs-extra": "^8.1.0",
+    "lc-jest-test": "^0.1.0"
+  }
+}
