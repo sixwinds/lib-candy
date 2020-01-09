@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "test",
   "main": "index.js",
-  "bin": "bin/lc-jest-test",
+  "bin": {
+    "lc-jest-test": "./bin/lc-jest-test.js"
+  },
   "scripts": {
     "test": "cd test && node ../bin/lc-jest-test.js"
   },

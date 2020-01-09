@@ -1,0 +1,21 @@
+{
+  "name": "lc-util",
+  "version": "0.1.0",
+  "description": "utils",
+  "main": "index.js",
+  "scripts": {
+    "test": "lc-jest-test"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "author": "Bernie Wang",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "fs-extra": "^8.1.0"
+  },
+  "devDependencies": {
+    "lc-jest-test": "^0.1.0"
+  }
+}
