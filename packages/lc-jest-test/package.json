@@ -1,0 +1,21 @@
+{
+  "name": "lc-jest-test",
+  "version": "0.1.0",
+  "description": "test",
+  "main": "index.js",
+  "bin": "bin/lc-jest-test",
+  "scripts": {
+    "test": "cd test && node ../bin/lc-jest-test.js"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Bernie Wang",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^24.9.0"
+  },
+  "devDependencies": {
+    "cross-spawn": "^7.0.1"
+  }
+}
