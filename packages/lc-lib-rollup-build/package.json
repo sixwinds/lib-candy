@@ -1,0 +1,31 @@
+{
+  "name": "lc-lib-rollup-build",
+  "version": "0.1.0",
+  "description": "rollup build lib",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "roll",
+    "up",
+    "build",
+    "lib"
+  ],
+  "author": "Bernie Wang",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/runtime": "^7.7.7",
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "rollup": "^1.29.0",
+    "rollup-plugin-babel": "^4.3.3"
+  },
+  "devDependencies": {
+    "fs-extra": "^8.1.0",
+    "lc-jest-test": "^0.1.0"
+  }
+}
