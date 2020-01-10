@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "description": "rollup build lib",
   "main": "index.js",
+  "bin": {
+    "lc-lib-rollup-build": "./bin/lc-lib-rollup-build.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "lc-jest-test"
   },
   "keywords": [
     "roll",

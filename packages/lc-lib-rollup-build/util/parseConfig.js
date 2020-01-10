@@ -4,7 +4,13 @@ function hasNodeEngines(pkg) {
   return !!(pkg.engines && pkg.engines.node);
 }
 
-
+function toAbsolutePath(pathName, defaultPath, basePath) {
+  if (pathName) {
+    return path.isAbsolute(pathName) ? pathName : path.resolve(basePath, pathName);
+  } else {
+    return defaultPath;
+  }
+}
 /* 
   @typedef {Object} BuildConfiguration
   @property {string} input - input file path
@@ -30,9 +36,9 @@ function parseConfig(basePath) {
   try {
     // override by fields in package.json
     const pkg = require(path.resolve(basePath, './package.json'));
-    configs.cjsFile = pkg.main || configs.cjsFile;
-    configs.esFile = pkg.module || configs.esFile;
-    configs.umdFile = pkg.browser || configs.umdFile;
+    configs.cjsFile = toAbsolutePath(pkg.main, configs.cjsFile, basePath);
+    configs.esFile = toAbsolutePath(pkg.module, configs.esFile, basePath);
+    configs.umdFile = toAbsolutePath(pkg.browser, configs.umdFile, basePath);
     if (pkg.dependencies || pkg.peerDependencies) {
       const allDependencies = Object.assign({}, pkg.dependencies, pkg.peerDependencies);
       configs.external = Object.keys(allDependencies);

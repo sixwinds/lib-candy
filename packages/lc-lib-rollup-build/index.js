@@ -46,39 +46,54 @@ function writeBundle(inputBundle, file, format, umdName) {
   return inputBundle.write(writeOptions);
 }
 
-function rollupLibBuild(basePath) {
+function lcLibRollupBuild(basePath) {
   basePath = basePath || process.cwd();
 
   const buildConfig = parseConfig(basePath);
-  // commonjs and es module
-  createCommonInputBundle(buildConfig).then(
-    function(inputBundle) {
-      writeBundle(inputBundle, buildConfig.cjsFile, 'cjs').catch(function(error) {
+  let inputPromiseArray;
+  if (buildConfig.umdName) {
+    inputPromiseArray = [
+      createCommonInputBundle(buildConfig),
+      createUmdInputBundle(buildConfig)
+    ];
+  } else {
+    inputPromiseArray = [createCommonInputBundle(buildConfig)];
+  }
+
+  return Promise.all(inputPromiseArray).then(function(result) {
+    const commonInputBundle = result[0];
+    const umdInputBundle = result[1];
+    const outputPromiseArray = [];
+
+    outputPromiseArray.push(
+      writeBundle(commonInputBundle, buildConfig.cjsFile, 'cjs').catch(function(error) {
         console.log('Build CommonJS bundle error: ');
         console.log(error);
-      });;
-      writeBundle(inputBundle, buildConfig.esFile, 'es').catch(function(error) {
+      })
+    );
+    
+    outputPromiseArray.push(
+      writeBundle(commonInputBundle, buildConfig.esFile, 'es').catch(function(error) {
         console.log('Build ES module bundle error: ');
         console.log(error);
-      });
-    }
-  );
-  // umd
-  if (buildConfig.umdName) {
-    createUmdInputBundle(buildConfig).then(
-      function(inputBundle) {
+      })
+    );
+
+    if (umdInputBundle) {
+      outputPromiseArray.push(
         writeBundle(
-          inputBundle,
+          umdInputBundle,
           buildConfig.umdFile,
           'umd',
           buildConfig.umdName
         ).catch(function(error) {
           console.log('Build UMD bundle error: ');
           console.log(error);
-        });
-      }
-    );
-  }
+        })
+      );
+    }
+    return Promise.all(outputPromiseArray);
+  });
 }
 
-module.exports = rollupLibBuild;
+module.exports = lcLibRollupBuild;
