@@ -1,0 +1,14 @@
+{
+  "name": "lib-candy",
+  "version": "0.1.0",
+  "description": "",
+  "bin": "./bin/lib-candy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bernie Wang",
+  "license": "MIT",
+  "dependencies": {
+    "lc-lib-doc-copy": "^0.1.0"
+  }
+}

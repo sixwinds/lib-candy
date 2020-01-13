@@ -10,7 +10,6 @@ function lcLibDocCopy(options) {
   options = options || {};
   const basePath = options.basePath || process.cwd();
   const libraryName = options.libraryName;
-  const libraryVersion = options.libraryVersion;
 
   copyTemplate(
     path.resolve(__dirname, './template/README.md'),
@@ -29,10 +28,7 @@ function lcLibDocCopy(options) {
   copyTemplate(
     path.resolve(__dirname, './template/package.json'),
     path.resolve(basePath, './package.json'),
-    {
-      libraryName: libraryName,
-      libraryVersion: libraryVersion
-    }
+    { libraryName: libraryName }
   );
 }
 
