@@ -4,11 +4,13 @@
   "description": "",
   "bin": "./bin/lib-candy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lib-candy": "node bin/lib-candy.js"
   },
   "author": "Bernie Wang",
   "license": "MIT",
   "dependencies": {
+    "cross-spawn": "^7.0.1",
     "lc-lib-doc-copy": "^0.1.0"
   }
 }
