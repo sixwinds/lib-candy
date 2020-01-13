@@ -1,0 +1,28 @@
+{
+  "name": "<%= libraryName %>",
+  "version": "<%= libraryVersion %>",
+  "description": "",
+  "keywords": [],
+  "homepage": "",
+  "bugs": {
+    "url": "",
+    "email": ""
+  },
+  "license": "UNLICENSED",
+  "author": "",
+  "files": [
+    "lib",
+    "es",
+    "umd"
+  ],
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "browser": "./umd/index.js",
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
