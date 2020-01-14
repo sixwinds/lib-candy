@@ -10,7 +10,17 @@
     "doc",
     "copy"
   ],
+  "homepage": "https://github.com/sixwinds/lib-candy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sixwinds/lib-candy",
+    "directory": "packages/lc-lib-doc-copy"
+  },
   "author": "Bernie Wang",
+  "files": [
+    "index.js",
+    "template"
+  ],
   "license": "MIT",
   "dependencies": {
     "lc-util": "^0.1.0"
