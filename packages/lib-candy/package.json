@@ -4,8 +4,7 @@
   "description": "",
   "bin": "./bin/lib-candy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lib-candy": "node bin/lib-candy.js"
+    "test": "cd test && node ../bin/lib-candy new my-lib"
   },
   "author": "Bernie Wang",
   "license": "MIT",
