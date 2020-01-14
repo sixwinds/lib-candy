@@ -26,7 +26,7 @@ function lcLibDocCopy(options) {
     path.resolve(basePath, './CHANGELOG.md')
   );
   copyTemplate(
-    path.resolve(__dirname, './template/package.json'),
+    path.resolve(__dirname, './template/package.json.tmpl'),
     path.resolve(basePath, './package.json'),
     { libraryName: libraryName }
   );

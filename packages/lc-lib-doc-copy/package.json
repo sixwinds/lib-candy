@@ -1,6 +1,6 @@
 {
   "name": "lc-lib-doc-copy",
-  "version": "0.1.4",
+  "version": "0.1.10",
   "description": "doc copy",
   "main": "index.js",
   "scripts": {
