@@ -9,7 +9,16 @@
   "keywords": [
     "utils"
   ],
+  "homepage": "https://github.com/sixwinds/lib-candy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sixwinds/lib-candy",
+    "directory": "packages/lc-util"
+  },
   "author": "Bernie Wang",
+  "files": [
+    "copyTemplate.js"
+  ],
   "license": "MIT",
   "dependencies": {
     "ejs": "^3.0.1",
