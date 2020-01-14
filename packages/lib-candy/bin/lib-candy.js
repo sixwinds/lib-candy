@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const path = require('path');
+const fs = require('fs')
 const spawn = require('cross-spawn');
 const libDocCopy = require('lc-lib-doc-copy');
 
@@ -45,6 +46,15 @@ if (command === 'new' && libName) {
       console.log('error: ' + code);
       console.log('signal: ' + signal)
       console.log()
+    } else {
+      const pkgJsonStr = fs.readFileSync('./package.json', 'utf8');
+      const pkgJson = JSON.parse(pkgJsonStr);
+      if (!pkgJson.scripts) {
+        pkgJson.scripts = {};
+      }
+      pkgJson.scripts.test = 'lc-jest-test';
+      pkgJson.scripts.build = 'lc-lib-rollup-build';
+      fs.writeFileSync('./package.json', JSON.stringify(pkgJson, null, '  '));
     }
   });
 } else {
