@@ -1,6 +1,6 @@
 {
   "name": "lc-lib-doc-copy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "doc copy",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,7 @@
   "author": "Bernie Wang",
   "files": [
     "index.js",
-    "template"
+    "template/*"
   ],
   "license": "MIT",
   "dependencies": {
