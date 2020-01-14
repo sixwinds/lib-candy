@@ -6,7 +6,16 @@
   "scripts": {
     "test": "cd test && node ../bin/lib-candy new my-lib"
   },
+  "homepage": "https://github.com/sixwinds/lib-candy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sixwinds/lib-candy",
+    "directory": "packages/lib-candy"
+  },
   "author": "Bernie Wang",
+  "files": [
+    "bin"
+  ],
   "license": "MIT",
   "dependencies": {
     "cross-spawn": "^7.0.1",
