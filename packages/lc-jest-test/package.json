@@ -2,7 +2,6 @@
   "name": "lc-jest-test",
   "version": "0.1.0",
   "description": "test",
-  "main": "index.js",
   "bin": {
     "lc-jest-test": "./bin/lc-jest-test.js"
   },
@@ -12,7 +11,16 @@
   "keywords": [
     "test"
   ],
+  "homepage": "https://github.com/sixwinds/lib-candy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sixwinds/lib-candy",
+    "directory": "packages/lc-jest-test"
+  },
   "author": "Bernie Wang",
+  "files": [
+    "bin"
+  ],
   "license": "MIT",
   "dependencies": {
     "jest": "^24.9.0"
