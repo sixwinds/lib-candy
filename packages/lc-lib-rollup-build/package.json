@@ -1,6 +1,6 @@
 {
   "name": "lc-lib-rollup-build",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "rollup build lib",
   "main": "index.js",
   "bin": {
