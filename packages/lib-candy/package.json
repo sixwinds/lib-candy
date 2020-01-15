@@ -1,6 +1,6 @@
 {
   "name": "lib-candy",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "",
   "bin": "./bin/lib-candy.js",
   "scripts": {
