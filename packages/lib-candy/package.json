@@ -19,6 +19,6 @@
   "license": "MIT",
   "dependencies": {
     "cross-spawn": "^7.0.1",
-    "lc-lib-doc-copy": "^0.1.11"
+    "lc-lib-doc-copy": "^0.2.0"
   }
 }
